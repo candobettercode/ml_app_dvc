@@ -53,7 +53,7 @@ def predict():
     # Predict
     prediction = model.predict(X_scaled)[0]
 
-    return f'<h2>Predicted Loan Status (Tip Amount or Similar): {prediction:.2f}</h2>'
+    return render_template('result.html', prediction=f"{prediction:.2f}")
 
 
 if __name__ == '__main__':
